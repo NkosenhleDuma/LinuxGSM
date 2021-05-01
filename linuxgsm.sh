@@ -47,7 +47,7 @@ userinput2="${2}"
 ## GitHub Branch Select
 # Allows for the use of different function files
 # from a different repo and/or branch.
-githubuser="GameServerManagers"
+githubuser="NkosenhleDuma"
 githubrepo="LinuxGSM"
 githubbranch="master"
 
@@ -314,18 +314,8 @@ fn_install_file(){
 
 # Prevent LinuxGSM from running as root. Except if doing a dependency install.
 if [ "$(whoami)" == "root" ]; then
-	# if [ "${userinput}" == "install" ]||[ "${userinput}" == "auto-install" ]||[ "${userinput}" == "i" ]||[ "${userinput}" == "ai" ]; then
-	# 	if [ "${shortname}" == "core" ]; then
-	# 		echo -e "[ FAIL ] Do NOT run this script as root!"
-	# 		exit 1
-	# 	fi
-	# elif [ ! -f "${functionsdir}/core_functions.sh" ]||[ ! -f "${functionsdir}/check_root.sh" ]||[ ! -f "${functionsdir}/core_messages.sh" ]; then
-	# 	echo -e "[ FAIL ] Do NOT run this script as root!"
-	# 	exit 1
-	# else
-		core_functions.sh
-		check_root.sh
-	# fi
+	core_functions.sh
+	check_root.sh
 fi
 
 # LinuxGSM installer mode.
