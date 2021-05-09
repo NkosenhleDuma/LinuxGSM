@@ -51,6 +51,11 @@ githubuser="NkosenhleDuma"
 githubrepo="LinuxGSM"
 githubbranch="master"
 
+# Overriding whoami
+whoami() {
+    echo "gsm"
+}
+
 # Core function that is required first.
 core_functions.sh(){
 	functionfile="${FUNCNAME[0]}"
@@ -313,8 +318,9 @@ fn_install_file(){
 }
 
 # Prevent LinuxGSM from running as root. Except if doing a dependency install.
+echo "Running as $(whoami)"
 if [ "$(whoami)" == "root" ]; then
-	core_functions.sh
+	 b.sh
 	check_root.sh
 fi
 
